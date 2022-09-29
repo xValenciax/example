@@ -1,14 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function MyHeader() {
-  return <h2>What the fuck is this?</h2>;
+function MyHeader(props) {
+  return <h2>{props.title}</h2>;
 }
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <MyHeader />
+      <MyHeader title={props.title} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
